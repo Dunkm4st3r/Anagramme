@@ -2,7 +2,8 @@
 anagramm1 = list(input("Anagramm1: ").lower())
 anagramm2 = list(input("Anagramm2: ").lower())
 
-if len(anagramm1) == len(anagramm2):
+# Wenn die länge des Wortes gleich ist und nicht das exakt gleiche Wort ist
+if len(anagramm1) == len(anagramm2) and anagramm1 != anagramm2:
     # x iteriert durch die Buchstaben von anagramm1
     for x in anagramm1:
         # y durch die Buchstaben von anagramm2
@@ -11,8 +12,6 @@ if len(anagramm1) == len(anagramm2):
             if x == y:
                 # Buchstabe löschen
                 anagramm2.remove(x)
-            else:
-                pass
 
 # Wenn mind. ein Buchstrabe übrig geblieben ist, dann ist es kein Anagramm
 if len(anagramm2) > 0:
